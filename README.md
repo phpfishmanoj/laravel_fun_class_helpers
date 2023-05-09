@@ -7,6 +7,23 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# app/helpers/helper.php //create folder and files and add functions
+
+proj_folder/composer.json
+	"autoload": {
+		"files": [
+			"app/helpers/helper.php"
+		]
+	},
+
+
+# app\helpers\CustomClassHelper.php //create class helper file
+
+config\app.php
+'aliases' => Facade::defaultAliases()->merge([
+	'CustomClassHelper' => \App\helpers\CustomClassHelper::class,
+])->toArray(),
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
